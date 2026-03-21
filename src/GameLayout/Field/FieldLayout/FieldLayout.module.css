@@ -1,0 +1,40 @@
+.field {
+	display: grid;
+	grid-template-columns: repeat(3, 50px);
+	justify-content: center;
+	margin: 10px;
+	gap: 10px;
+	
+}
+
+.button {
+	padding: 1em 1em;
+	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+	font-size: 18px;
+	border: none;
+	transition: background-color 0.15s ease;
+}
+
+.button:hover {
+	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 87%);
+}
+
+.button:disabled {
+	background-color: var(--disabled-color);
+}
+
+.buttonReset {
+	padding: 0.5em 0.5em;
+	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+	font-size: 12px;
+	border: none;
+	transition: background-color 0.15s ease;
+}
+
+.buttonReset:hover {
+	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 87%);
+}
+
+.buttonReset:disabled {
+	background-color: var(--disabled-color);
+}
