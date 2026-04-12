@@ -1,6 +1,9 @@
 import { Field } from './Field/Field'
 import { Information } from './Information/Information'
 import styles from './GameLayout.module.css'
+import PropTypes from 'prop-types'
+
+
 
 export const GameLayout = ({ isDraw, isGameEnded, currentPlayer, field, playButton, resetButton }) => {
     return (
@@ -12,4 +15,13 @@ export const GameLayout = ({ isDraw, isGameEnded, currentPlayer, field, playButt
             <Field field = {field} playButton = {playButton} resetButton={resetButton}/>
         </div>
     )
+}
+
+GameLayout.propTypes = {
+    isDraw: PropTypes.bool,
+    isGameEnded: PropTypes.bool,
+    currentPlayer: PropTypes.string,
+    field: PropTypes.arrayOf(PropTypes.string),
+    playButton: PropTypes.func,
+    resetButton: PropTypes.func
 }
